@@ -1,0 +1,12 @@
+@using SitecoreCookbook.Helpers
+@model IEnumerable<SitecoreCookbook.Models.CarouselSlide>
+<div class="carousel-inner" role="listbox">
+    @foreach (var item in Model)
+    {
+        <div>
+            <a href="@item.Url" title="@item["Title"]">
+                @item.Image
+            </a>
+        </div>
+    }
+</div>

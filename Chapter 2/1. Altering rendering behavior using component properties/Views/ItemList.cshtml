@@ -1,0 +1,21 @@
+﻿@model SitecoreCookbook.Models.ItemList
+
+<div class="@Model.CssClass">
+    <h4>@Model.Title</h4>
+    @foreach (var row in Model.Items)
+    {
+        <div class="row show-grid">
+            <div class="photo">
+                @Html.Sitecore().Field("Image", row, new { mw=65, mh=65 })
+            </div>
+            <div class="content">
+                <h6>
+                    <a href="@Sitecore.Links.LinkManager.GetItemUrl(row)">
+                        @Html.Sitecore().Field("Title", row)
+                    </a>
+                </h6>
+                <p>@Html.Sitecore().Field("Body", row)</p>
+            </div>
+        </div>
+    }
+</div>

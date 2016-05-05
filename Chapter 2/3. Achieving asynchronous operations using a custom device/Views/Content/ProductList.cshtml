@@ -1,0 +1,21 @@
+﻿@model SitecoreCookbook.Models.ItemList
+
+<script language="javascript">
+    function LoadAsync(url) {
+        $j = jQuery.noConflict();
+        $j.get(url, function (data, status) {
+            $j("#productcontent").html(data);
+        });
+    }
+</script>
+<div class="async-list">
+    @foreach (var row in Model.Items)
+    {
+        <a onclick="LoadAsync('@Sitecore.Links.LinkManager.GetItemUrl(row)?async=true&sc_mode=preview')" href="javascript:">
+            <div class="row">
+                @Html.Sitecore().Field("Title", row, new { DisableWebEditing = true })
+            </div>
+        </a>
+    }
+</div>
+<div id="productcontent"></div>

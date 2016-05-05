@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@Html.Sitecore().Field("Title", Sitecore.Context.Item, new { DisableWebEdit = true })</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link href="/css/desktop.css" rel="stylesheet" />
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div>
+        <div id="header">
+            <a href="/">
+                @Html.Sitecore().Field("Logo", Sitecore.Context.Database.GetItem("/sitecore/Content/Global/Configurations"))
+            </a>
+        </div>
+        <div id="contentarea">
+            <h1>@Html.Sitecore().Field("Title")</h1>
+            @Html.Sitecore().Field("Body")
+        </div>
+        <div id="footer">
+            @Html.Sitecore().Field("Copyright Text", Sitecore.Context.Database.GetItem("/sitecore/Content/Global/Configurations"))
+        </div>
+    </div>
+</body>
+</html>

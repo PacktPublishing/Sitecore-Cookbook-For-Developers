@@ -1,0 +1,20 @@
+﻿@model SitecoreCookbook.Models.BreadcrumbItemList
+<div>
+    <ol class="breadcrumb">
+        @foreach (var item in Model.Breadcrumbs)
+        {
+            <li>
+                @if (@item.IsActive)
+                {
+                @item.Title
+                }
+                else
+                {
+                <a href="@item.Url">
+                    @item.Title
+                </a>
+                }
+            </li>
+        }
+    </ol>
+</div>

@@ -1,0 +1,226 @@
+﻿body {
+    font-family: Arial;
+    font-size: 9pt;
+}
+/*@media screen and (min-width : 1140px) {*/
+#contentarea {
+    float: left;
+    width: 55%;
+    /*padding: 0 1em;*/
+    /*border: 2px solid black;*/
+    padding-bottom: 20px;
+    padding-left: 15px;
+    border-left-width: 1px;
+    border-left-color: gray;
+    border-left-style: dotted;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 80%;
+}
+
+
+#menu {
+    height: 65px;
+    /*width: 100%;*/
+    clear: none;
+    background-color: black;
+    color: white;
+    
+    padding-left: 100px;
+    padding-right: 100px;
+
+    float: left;
+    /*margin: 0 0 0 -75%;*/
+    width: 100%;
+    clear: none;
+    padding-bottom: 20px;
+}
+
+
+.topmenu {
+    border-radius: 4px;
+    list-style: outside none none;
+    /*margin-right: 20px;*/
+}
+
+.topmenu > li {
+    display: list-item;
+    padding-right: 7px;
+    float:left;
+}
+
+.topmenu li a {
+    color: white;
+    display: inline-block;
+    padding: 14px 10px;
+    text-align: center;
+    text-decoration: none;
+}
+.topmenu li a:hover:not(.active) {
+    background-color: #4caf50;
+}
+.topmenu li a.active {
+    background-color: #4caf50;
+}
+
+
+
+
+#sidemenu {
+    float: left;
+    /*margin: 0 0 0 -75%;*/
+    width: 20%;
+    clear: none;
+    padding-bottom: 20px;
+}
+
+
+.sidemenu {
+    border-radius: 4px;
+    list-style: outside none none;
+    margin-bottom: 20px;
+}
+
+    .sidemenu > li {
+        display: list-item;
+        padding-bottom: 7px;
+    }
+
+
+
+#header {
+    height: 40px;
+    padding-top: 15px;
+    padding-bottom: 50px !important;
+    clear: none;
+    background-color: #7F0078;
+    color: white;
+    vertical-align: middle;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+#breadcrumb {
+    height: 60px;
+    /*width: 100%;*/
+    clear: none;
+    background-color: white;
+    border-bottom-width: 1px;
+    border-bottom-color: gray;
+    border-bottom-style: solid;
+    margin-bottom: 35px;
+    /*padding-top: 10px;*/
+}
+
+.breadcrumb {
+    border-radius: 4px;
+    list-style: outside none none;
+    margin-bottom: 20px;
+    /*padding: 8px 15px;*/
+}
+
+    .breadcrumb > li {
+        display: inline-block;
+    }
+
+        .breadcrumb > li + li::before {
+            color: #ccc;
+            content: "/ ";
+            padding: 0 5px;
+        }
+
+    .breadcrumb > .active {
+        color: #777;
+    }
+
+
+#rightmenu {
+    float: right;
+    width: 25%;
+    clear: none;
+    border: 2px solid black;
+}
+
+#footer {
+    width: 100%;
+    height: 30px;
+    background-color: black;
+    color: white;
+    float: left;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 100%;
+    margin: auto;
+}
+
+.row {
+    border-bottom-style: dotted;
+    border-bottom-width: 1px;
+}
+
+    .row .photo {
+        width: 100px;
+        float: left;
+    }
+
+    .row .content {
+        width: 300px;
+        float: left;
+    }
+
+.home-list {
+    /*   margin: 5px 5px 5px 5px;
+    border:1px;
+    border-style:dotted;
+    border-color:black;*/
+    width: 400px;
+}
+
+.async-list {
+    width: 100px;
+    margin-left: 10px;
+    float: left;
+}
+
+.async-list .row {
+    height: 30px;
+    padding-top: 5px;
+    vertical-align: middle;
+}
+
+.async-list a:active .row {
+background-color:red;
+}
+
+.async-list a:hover .row {
+background-color:silver;
+}
+
+#productarea {
+    float: left;
+    width:300px;
+    margin-left:20px;
+}
+#languageswitcher {
+    float:right;
+    padding-right:100px;
+    width:420px;
+}
+#languageswitcher div {
+    float:left;
+    margin-left:10px;
+}
+
+#languageswitcher div a{
+    color:white;
+    font-size:8pt;
+}

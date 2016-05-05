@@ -1,0 +1,16 @@
+﻿@model RenderingModel
+<div>
+    <ol class="sidemenu">
+        @foreach (var item in Model.Item.Parent.Children.ToArray())
+        {
+            if (@item["Show in Menu"] == "1")
+            {
+                <li>
+                    <a href="@Sitecore.Links.LinkManager.GetItemUrl(@item)">
+                        @item.Fields["Title"].Value
+                    </a>
+                </li>
+            }
+        }
+    </ol>
+</div>

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@Html.Sitecore().Field("Title", Sitecore.Context.Item, new { DisableWebEdit = true })</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link href="/css/desktop.css" rel="stylesheet" />
+	<script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div>
+        <div id="header">
+            <a href="/">
+                @Html.Sitecore().Field("Logo", Sitecore.Context.Database.GetItem("/sitecore/Content/Global/Configurations"))
+            </a>
+        </div>
+        <div id="menu">
+
+        </div>
+        <div class="container">
+            <div id="breadcrumb">
+                @Html.Sitecore().Rendering("{764C9697-EA31-4409-8208-0CAECBD76500}")
+            </div>
+            <div id="sidemenu">
+                @Html.Sitecore().Rendering("{2383A57F-21FF-4A77-9E2A-C467F0CEDA57}")
+            </div>
+            <div id="contentarea">
+                <article>
+                    @Html.Sitecore().Rendering("{62104CCC-D747-4671-BB3B-CFF041F42A5A}")
+                    <h1>@Html.Sitecore().Field("Title")</h1>
+                    @Html.Sitecore().Field("Body")
+                </article>
+            </div>
+            <div id="footer">
+                @Html.Sitecore().Field("Copyright Text", Sitecore.Context.Database.GetItem("/sitecore/Content/Global/Configurations"))
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

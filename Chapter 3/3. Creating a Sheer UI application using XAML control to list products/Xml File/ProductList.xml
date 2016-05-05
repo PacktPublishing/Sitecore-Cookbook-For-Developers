@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+  <ProductListing>
+    <FormDialog Icon="People/16x16/clock_run.png" Header="Product List" Text="View all the products">
+      <CodeBeside Type="SitecoreCookbook.XAML.ProductListPage,SitecoreCookbook"/>
+      <Stylesheet Src="/sitecore/shell/Applications/Content Manager/Dialogs/Properties/Properties.css" />
+
+      <GridPanel ID="Viewer" Height="315" class="scBackground" vAlign="top" Width="100%" Cellpadding="5">
+        <Border align="center">
+          <Scrollbox ID="Summary" Width="100%" Height="300" Style="padding:14px 4px 0px 4px; border-width:1px; border-style:solid" >
+            <Listview ID="ProductList" View="Details" Width="100%" Background="white" MultiSelect="true">
+              <ListviewHeader>
+                <ListviewHeaderItem Name="Title" Header="Title" />
+                <ListviewHeaderItem Name="Price" Header="Price" />
+                <ListviewHeaderItem Name="Id" Header="Item Id" />
+              </ListviewHeader>
+            </Listview>
+          </Scrollbox>
+        </Border>
+
+        <Border align="left" style="margin-top:20px;">
+          <Button Header="Delete with method" Click="DeleteProducts" />
+          <Button Header="Delete with message" Click="product:delete" />
+        </Border>
+
+      </GridPanel>
+    </FormDialog>
+  </ProductListing>
+</control>

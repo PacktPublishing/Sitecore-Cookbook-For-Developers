@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@Html.Sitecore().Field("Title", Sitecore.Context.Item, new { DisableWebEdit = true })</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link href="/css/desktop.css" rel="stylesheet" />
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    @*<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>*@
+
+
+</head>
+<body>
+    <div>
+        <div id="header">
+            <div style="width:200px;">
+                <a href="/">
+                    @Html.Sitecore().Field("Logo", Sitecore.Context.Database.GetItem("/sitecore/Content/Home/Configurations"))
+                </a>
+            </div>
+            @Html.Sitecore().Controller("Navigation", "LanguageSwitcher")
+        </div>
+        <div id="menu">
+
+        </div>
+        <div class="container">
+            <div id="breadcrumb">
+                @Html.Sitecore().Rendering("{764C9697-EA31-4409-8208-0CAECBD76500}")
+            </div>
+            <div id="sidemenu">
+                @Html.Sitecore().Placeholder("left-column")
+            </div>
+            <div id="contentarea">
+                <article>
+                    @Html.Sitecore().Placeholder("main-content")
+                </article>
+            </div>
+            <div id="footer">
+                @Html.Sitecore().Field("Copyright Text", Sitecore.Context.Database.GetItem("/sitecore/Content/Home/Configurations"))
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

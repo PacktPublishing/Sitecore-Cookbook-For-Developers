@@ -1,0 +1,9 @@
+﻿@model IDictionary<string, string>
+<div id="languageswitcher">
+    @foreach (var language in Model)
+    {
+        <div>
+            <a href="@language.Value">@language.Key</a>
+        </div>
+    }
+</div>
