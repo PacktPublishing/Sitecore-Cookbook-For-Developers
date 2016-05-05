@@ -1,0 +1,8 @@
+For this, you can add link provider properties in <sites> as shown in below.
+-----------------------------------------------------------------------------
+
+<site name="website" 
+	addAspxExtension="false" alwaysIncludeServerUrl="false" 
+        encodeNames="true" languageEmbedding="asNeeded" 
+        languageLocation="filePath" lowercaseUrls="false"
+      	virtualFolder="/" physicalFolder="/" rootPath="/sitecore/content" startItem="/home" database="web" domain="extranet" />

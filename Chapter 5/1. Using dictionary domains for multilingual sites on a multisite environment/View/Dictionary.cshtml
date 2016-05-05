@@ -1,0 +1,16 @@
+﻿@using Sitecore.Globalization
+@model RenderingModel
+
+<p><b>Using common Dictionary</b></p>
+@Html.Raw(Sitecore.Context.Language.Title) <hr />
+@Html.Raw(Translate.Text("Firstname"))  <br />
+@Html.Raw(Translate.Text("Surname"))  <br />
+@Html.Raw(Translate.Text("Email"))
+
+<p><b>Using Dictionary Domains</b></p>
+
+@Html.Raw(Sitecore.Context.Language.Title) <hr />
+@Html.Raw(Translate.TextByDomain("Site-1 Dictionary", "Firstname"))  <br />
+@Html.Raw(Translate.TextByDomain("Site-1 Dictionary", "Surname"))  <br />
+@Html.Raw(Translate.TextByDomain("Site-1 Dictionary", "Email"))
+        

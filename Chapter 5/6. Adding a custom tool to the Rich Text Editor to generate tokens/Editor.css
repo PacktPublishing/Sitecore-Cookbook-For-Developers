@@ -1,0 +1,15 @@
+body p:first-child {
+  margin-top: 0;
+}
+
+body p:last-child {
+  margin-bottom: 0;
+}
+
+token {
+    background: #F5F5F5 url('/~/icon/Software/16x16/component.png') no-repeat 3px center;
+    opacity: .6;
+    border: 1px dashed #d35400;
+    border-radius: 3px;
+    padding: 0 5px 0 20px;
+}

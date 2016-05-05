@@ -1,0 +1,17 @@
+﻿@model System.Data.DataRowCollection
+<div class="newslist">
+    @foreach (System.Data.DataRow news in Model)
+    {
+        <div>
+            @news["NewsDate"]
+        </div>
+        <div>
+            <a href='@news["UrlTitle"]'>@news["Title"]
+            </a>
+        </div>
+        <div>
+            @news["Description"]
+        </div>
+        <hr />
+    }
+</div>

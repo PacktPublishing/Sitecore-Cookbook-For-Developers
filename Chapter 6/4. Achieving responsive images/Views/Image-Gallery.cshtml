@@ -1,0 +1,19 @@
+﻿@using SitecoreCookbook.Helpers
+@using Sitecore.Data.Items
+@model RenderingModel
+<h3>Image Gallery</h3>
+<div style="width: 100%">
+    @foreach (Item item in Model.Item.Children)
+    {
+        <a href="@Sitecore.Links.LinkManager.GetItemUrl(item)">
+            <div style="float: left; border: 1px solid gray; text-align: center">
+                @Html.Sitecore().RenderResponsivePicture("Image", item, false,
+            new List<Dimensions>{
+                new Dimensions(800, 200,0),
+                new Dimensions(500, 150,0),
+                new Dimensions(300, 100,0)
+            })
+            </div>
+        </a>
+    }
+</div>

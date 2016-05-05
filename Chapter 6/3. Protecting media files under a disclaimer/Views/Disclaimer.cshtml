@@ -1,0 +1,11 @@
+﻿<h3>@Html.Sitecore().Field("Title", Model.Item)</h3>
+<p>
+    @Html.Sitecore().Field("Description", Model.Item)
+</p>
+
+@using (Html.BeginForm("Submit", "Disclaimer", FormMethod.Post)){
+<p>
+<input type="submit" name="submitButton" value="Accept" />
+<input type="submit" name="submitButton" value="Reject" />
+</p>
+}

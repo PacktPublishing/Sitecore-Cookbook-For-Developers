@@ -1,0 +1,6 @@
+For invoking the job, you can write below code
+-----------------------------------------------
+
+ResetLayoutDetailsJob job = new ResetLayoutDetailsJob();
+Item item = Sitecore.Configuration.Factory.GetDatabase("master").GetItem("/sitecore/content/Home");
+job.Run(item);

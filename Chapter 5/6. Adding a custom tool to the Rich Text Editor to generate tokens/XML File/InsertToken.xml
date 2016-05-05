@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+  <RichText.InsertToken>
+    <FormDialog Icon="Network/32x32/link.png" Header="Insert Token"
+      Text="Navigate to tokens or find item and its field." OKButton="Insert">
+
+      <CodeBeside Type="SitecoreCookbook.XAML.InsertTokenForm,SitecoreCookbook"/>
+
+	  <DataContext ID="RootItem" Root="{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"/>
+	  <Scrollbox Width="100%" Height="90%" Background="white" Border="none" Padding="0">
+        <TreeviewEx ID="TokenTree" DataContext="RootItem" Root="true" />
+      </Scrollbox>
+      <Border ID="BorderField" class="scInsertImageFileName">
+        <GridPanel class="scFormTable" Columns="2">
+          <Literal Text="Field Name:"/>
+          <Edit ID="TextField" />
+        </GridPanel>
+      </Border>
+
+    </FormDialog>
+  </RichText.InsertToken>
+</control>
