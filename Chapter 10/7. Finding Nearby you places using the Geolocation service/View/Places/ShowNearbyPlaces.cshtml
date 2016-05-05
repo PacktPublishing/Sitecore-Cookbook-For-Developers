@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Sitecore.Data.Items.Item>
+<h3>Service Stations near you:</h3>
+<ul>
+    @foreach (var place in Model)
+    {
+        <li>
+            <a href="@Sitecore.Links.LinkManager.GetItemUrl(place)">
+                <b>@Html.Sitecore().Field("Title", place)</b> <br />
+            @Html.Sitecore().Field("Address", place), 
+            @Html.Sitecore().Field("City", place)
+        </li>
+    }
+</ul>

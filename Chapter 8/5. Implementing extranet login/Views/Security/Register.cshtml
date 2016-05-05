@@ -1,0 +1,33 @@
+﻿<div class="securityform">
+    <h1>
+        @Html.Sitecore().Field("Title")
+    </h1>
+    @Html.Sitecore().Field("Body")
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        <p>
+            <label for="UserName">Username:</label>
+            @Html.TextBox("UserName")
+            @Html.ValidationMessage("UserName", "*")
+        </p>
+        <p>
+            <label for="Password">Password:</label>
+            @Html.Password("Password")
+            @Html.ValidationMessage("Password", "*")
+        </p>
+        <p>
+            <label for="ConfirmPassword">Retype Password:</label>
+            @Html.Password("ConfirmPassword")
+            @Html.ValidationMessage("ConfirmPassword", "*")
+        </p>
+        <p>
+            @Html.CheckBox("RememberMe")
+            <label for="RememberMe" style="display:inline">RememberMe</label>
+        </p>
+
+        <p><input type="submit" value="Log in" class="btn btn-primary" /></p>
+    }
+</div>

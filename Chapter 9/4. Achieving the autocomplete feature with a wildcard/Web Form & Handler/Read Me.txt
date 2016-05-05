@@ -1,0 +1,5 @@
+Make sure you have updated AutoComplete.ashx path in the aspx file while making ajax request.
+
+e.g.
+$.ajax({
+	url: "/Cookbook/autocomplete.ashx", ... 

@@ -1,0 +1,19 @@
+Hardcode below details in program
+----------------------------------
+double latitude = 40.69;
+double longitude = -73.95;
+
+
+Some reference values to latitude and longiture nearer to above location:
+-------------------------------------------------------------------------
+40.7
+-73.95
+
+40.71
+-75.94
+
+40.71
+-73.94
+
+40.69
+-73.98
