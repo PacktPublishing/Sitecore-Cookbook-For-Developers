@@ -1,0 +1,8 @@
+Follow below steps to achieve strongly typed value of our custom field.
+
+1. Copy config to \App_Config\Include\Cookbook folder
+2. Copy code files from Fields and Pipelines to appropriate locations.
+3. Register this control in \App_Config\FieldTypes.config file.
+
+
+Now, copy files from "Test-aspx-file" folder.. you will see how it will render the strongly typed values....
